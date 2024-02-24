@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "bagis_backend": {
+      "candid": "src/bagis_backend/bagis_backend.did",
+      "package": "bagis_backend",
+      "type": "rust"
+    },
+    "bagis_frontend": {
+      "dependencies": [
+        "bagis_backend"
+      ],
+      "source": [
+        "src/bagis_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "bagis_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
